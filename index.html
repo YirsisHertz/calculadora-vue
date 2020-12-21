@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Dinamica</title>
+
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="title">{{title}}</h1>
+      <hr />
+      <div class="container">
+        <label class="text" for="number1">Number 1:</label>
+        <input
+          class="input"
+          type="number"
+          v-model.number="number1"
+          placeholder="First Value"
+        />
+        <label class="text" for="number2">Number 2:</label>
+        <input
+          class="input"
+          type="number"
+          v-model.number="number2"
+          placeholder="Second Value"
+        />
+      </div>
+      <hr />
+      <span class="success"> Suma: {{suma}} </span>
+      <span class="success"> Resta: {{resta}} </span>
+      <span class="success"> Multiplicación: {{multiplicacion}} </span>
+      <span :class="type"> Division: {{division}} </span>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+  </body>
+</html>
